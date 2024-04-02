@@ -7,7 +7,13 @@ const { engine } = require('express-handlebars');
 const Post = require('./DAO/Post');
 
 // Template de engine
-app.engine('handlebars', engine());
+app.engine('handlebars', engine({
+    defaultLayout: 'main',
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true,
+    },
+}));
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
