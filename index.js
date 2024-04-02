@@ -3,18 +3,13 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 8080;
-const handlebars = require('express-handlebars');
+const { engine } = require('express-handlebars');
 const Post = require('./DAO/Post');
 
 // Template de engine
-app.engine('handlebars', handlebars.engine({
-    defaultLayout: 'main', 
-    runtimeOptions: {
-        allowProtoPropertiesByDefault: true,
-        allowProtoMethodsByDefault: true,
-    },
-}));
+app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
+app.set('views', './views');
 
 // Middleware para fazer o parsing do corpo da requisição HTTP
 app.use(bodyParser.urlencoded({ extended: false }));
