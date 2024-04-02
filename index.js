@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = 8080;
+const port = process.env.PORT || 8080;
 const { engine } = require('express-handlebars');
 const Post = require('./DAO/Post');
 
@@ -79,6 +79,6 @@ app.use(express.static('public'));
 
 // Abrindo uma requisição com o servidor
 app.listen(port, () => {
-    console.info(`Servidor rodando em http://localhost:${port}/inicial` || process.env.PORT); 
+    console.info(`Servidor rodando em http://localhost:${port}/inicial`); 
 }); 
  
