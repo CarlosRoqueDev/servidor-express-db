@@ -15,7 +15,7 @@ app.engine('handlebars', engine({
     },
 }));
 app.set('view engine', 'handlebars');
-app.set('views', './views');
+app.set('views',__dirname + '/views');
 
 // Middleware para fazer o parsing do corpo da requisição HTTP
 app.use(bodyParser.urlencoded({ extended: false }));
