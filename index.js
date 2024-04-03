@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Servir arquivos estáticos do diretório 'public'
-app.use(express.static('public')); 
+app.use(express.static(__dirname + '/public')); 
 
 // Rotas
     // Rota para ir para a lista de agendamentos
