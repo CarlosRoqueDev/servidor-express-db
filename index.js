@@ -38,7 +38,7 @@ app.use(express.static(__dirname + '/public'));
     });
 
     // Rota para ir para a pagina inicial
-    app.get('/inicial', (req, res) => {
+    app.get('/', (req, res) => {
         res.render('inicial'); 
     });
 
@@ -79,6 +79,6 @@ app.use(express.static(__dirname + '/public'));
 
 // Abrindo uma requisição com o servidor
 app.listen(port, () => {
-    console.info(`Servidor rodando em http://localhost:${port}/inicial`); 
+    console.info(`Servidor rodando em http://localhost:${port}`); 
 }); 
  
