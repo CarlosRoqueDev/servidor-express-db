@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVA PATAS - Cadastro</title>
+
+    <!-- Chamar os arquivos externos -->
+    <link rel="stylesheet" type="text/css" href="css/formulario_styles.css">
+
+</head>
+
+<body>
+
+    <!--<img id="img_fundo" src="image/LAVANDO_PATAS-0.png" alt="lava patas">-->
+    <header class="topo">
+        <nav>
+            <div id="logo">
+
+                <img src="image/LAVANDO_PATAS-0.png" alt="logo">
+
+            </div>        
+        </nav>       
+    </header>
+
+    <main>
+        <div class="box">
+            <form action="tbl_agenda" method="post">
+                <fieldset>
+
+                    <legend><b>Cadastro Lava Patas</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nomeCli" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Cliente</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="nomePet" id="nomePet" class="inputUser" required>
+                        <label for="nomePet" class="labelInput">Nome Pet</label>
+                    </div>     
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">e-mail</label>
+                    </div> 
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="radio" name="rdServico" value="Banho" required = "required"/> 
+                        <label for="banho">Banho</label>
+                        <input type="radio" name="rdServico" value="Banho e Tosa"/>
+                        <label for="banho">Banho e Tosa</label>
+                        <input type="radio" name="rdServico" value="Tosa"/> 
+                        <label for="banho">Tosa</label>
+                    </div>                    
+                    <br><br>
+                        <label for="data_agendamento">Agendamento</label>
+                        <input type="date" name="data" id="data" required>
+                    <br><br>
+                    <label for="horario">Selecione o horário</label>
+                    <select id="comboBoxHora" name="comboBoxHora" required = "required">  
+                        <option value="" </option>                        
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>      
+                    </select>
+                    <br><br>
+                    <input type="submit" name="submit" id="button-agendar" value="Agendar">   
+                    
+                </fieldset>              
+            </form>
+        </div>
+        <div>
+            <a href="/" type="submit"><button class = "botao-inicial">Tela inicial</button></a>
+            <a href="/consulta" type="submit"><button class = "botao-consulta">Consulta</button></a>
+        </div>       
+    </main>
+    </body>
+</html>

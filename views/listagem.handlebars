@@ -1,0 +1,52 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chamar os arquivos externos -->
+    <link rel="stylesheet" type="text/css" href="css/listagem_styles.css">
+</head>
+<header>
+    <h1>LISTA: CLIENTES AGENDADOS</h1>
+    <nav>
+        <div id="logo">
+            <img src="image/LAVANDO_PATAS-0.png" alt="logo">
+        </div>       
+    </nav>
+    <div>
+        <a href="/" type="submit" id="botao-inicial"><button class="botao-inicial">Tela inicial</button></a>
+        <a href="/cadastro" type="submit" id="agendar"><button class="botao-agendar">Agendamento</button></a>
+    </div> 
+</header>
+
+    <table class="topo-tabela">
+         <thead>
+            <tr class="topo-linha">
+                <th>Nome do cliente</th>
+                <th>Pet</th>
+                <th>Tipo de Serviço</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>   
+        <tbody>
+            {{#each posts}}
+                <tr>
+                    <td>{{nome_cliente}}</td>
+                    <td>{{nome_pet}}</td>
+                    <td>{{tipo_servico_cliente}}</td>
+                    <td>{{email_cliente}}</td>
+                    <td>{{tel_cliente}}</td>
+                    <td>{{data_agenda}}</td>
+                    <td>{{hora_agenda}}</td>
+                    <td><a href="/deletar/{{pk_agenda}}" id="excluir"><button class="botao-excluir"><i class="fa-solid fa-trash-can"></i></button></a></td>
+                </tr>
+            {{/each}}            
+        </tbody>
+    </table>
+    
+    
+<script src="https://kit.fontawesome.com/efb8d7431f.js" crossorigin="anonymous"></script>
